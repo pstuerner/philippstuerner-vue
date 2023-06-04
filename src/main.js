@@ -1,21 +1,14 @@
-import { createApp, Vue} from 'vue';
+import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
-import VueRouter from 'vue-router'
 import { createMetaManager, Meta } from 'vue-meta'
 import './assets/styles.css';    
 import './assets/index-styles.css';  
-
-// const app = createApp(App)
-//     .use(router)
-//     .use(createMetaManager());
-
-// await router.isReady()
-// app.mount('#app')
+import './assets/stackoverflow-dark.css';  
 
 const app = createApp(App)
     .use(router)
-    .use(createMetaManager()) // add this line
+    .use(createMetaManager())
 
 await router.isReady()
 app.mount('#app')

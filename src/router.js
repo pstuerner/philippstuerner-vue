@@ -4,6 +4,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from './components/Home.vue';
 import About from './components/About.vue';
 import BlogPost from './components/BlogPost.vue';
+import DonConjugator from './components/posts/don_conjugator/don_conjugator_app.vue';
+import DonConjugatorPractice from './components/posts/don_conjugator/don_conjugator_practice.vue';
 
 const routes = [
     {
@@ -20,6 +22,16 @@ const routes = [
         path: '/posts/:name',
         name: 'BlogPost',
         component: BlogPost,
+    },
+    {
+        path: '/posts/don_conjugator/practice/:mode/:verbs',
+        name: 'DonConjugatorPractice',
+        component: DonConjugatorPractice,
+    },
+    {
+        path: '/apps/don_conjugator',
+        name: 'DonConjugator',
+        component: DonConjugator,
     },
 ];
 

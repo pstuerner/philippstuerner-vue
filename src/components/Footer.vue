@@ -20,16 +20,16 @@
                     </span>
                 </a>
                 </li>
-                <li class="list-inline-item" target="_blank">
-                <a href="https://github.com/pstuerner">
+                <li class="list-inline-item">
+                <a href="https://github.com/pstuerner" target="_blank">
                     <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                     </span>
                 </a>
                 </li>
-                <li class="list-inline-item" target="_blank">
-                <a href= "mailto:philipp.stuerner@web.de">
+                <li class="list-inline-item">
+                <a href= "mailto:philipp.stuerner@web.de" target="_blank">
                     <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>

@@ -3,6 +3,8 @@
 </template>
   
 <script>
+  import { markRaw } from "vue";
+
   export default {
     data() {
       return {
@@ -13,11 +15,11 @@
       const { name } = this.$route.params;
 
       try {
-        const module = await import(`./posts/${name}.vue`);
-        this.component = module.default;
+        const module = await import(`./posts/${name}/${name}.vue`);
+        this.component = markRaw(module.default);
       } catch (error) {
         const module = await import(`./NotFound.vue`);
-        this.component = module.default;
+        this.component = markRaw(module.default);
       }
     },
   };

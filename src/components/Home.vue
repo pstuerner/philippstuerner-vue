@@ -6,29 +6,19 @@
         <div class="col-md-10 col-lg-8 col-xl-7">
           <!-- Post preview-->
           <div v-for="post in blogPosts" :key="post.slug" class="post-preview">
-              <a>
-                <h2 class="post-title"><router-link :to="`/posts/${post.slug}`">{{ post.title }}</router-link></h2>
-                <h3 class="post-subtitle"><router-link :to="`/posts/${post.slug}`">{{ post.subtitle }}</router-link></h3>
-              </a>
+              <router-link :to="`/posts/${post.slug}`">
+                <h2 class="post-title">{{ post.title }}</h2>
+                <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+              </router-link>
             <p class="post-meta" v-html="`${post.description}`"></p>
           </div>
           <hr class="my-4" />
         </div>
       </div>
     </div>
-    <!-- <div>
-      <h1>Welcome to My Website!</h1>
-      <h2>Blog Posts:</h2>
-      <ul>
-        <li v-for="post in blogPosts" :key="post.id">
-          <router-link :to="`/posts/${post.slug}`">{{ post.title }}</router-link>
-        </li>
-      </ul>
-    </div> -->
 </template>
 
 <script>
-// import Head from './Head.vue';
 import Banner from './Banner.vue';
 
 export default {
@@ -48,19 +38,13 @@ export default {
           description: 'Posted by <a href="about">Philipp Stuerner</a> on April 23, 2023',
         },
         {
-          slug: "sinverguenza",
-          title: "Sinvergüenza",
-          subtitle: "Stock screener built on top of the Yahoo Finance API using Plotly.js, D3.js, and MongoDB.",
-          description: 'Posted by <a href="about">Philipp Stuerner</a> on Januar 21, 2023',
-        },
-        {
-          slug: "donquijote",
+          slug: "don_quijote",
           title: "Don Quijote",
           subtitle: "Telegram based application to practice Spanish vocabulary.",
           description: 'Posted by <a href="about">Philipp Stuerner</a> on December 17, 2022',
         },
         {
-          slug: "cmcscanner",
+          slug: "cmc_scanner",
           title: "CMC Scanner",
           subtitle: "Small web application to query and compare historical CoinMarketCap snapshots.",
           description: 'Posted by <a href="about">Philipp Stuerner</a> on September 11, 2022',
@@ -93,7 +77,6 @@ export default {
     };
 },
   components: {
-    // Head,
     Banner
   }
 };
